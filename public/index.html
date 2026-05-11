@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>台股財經新聞整理</title>
+    <link rel="stylesheet" href="/public/style.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">Local Market Radar</p>
+        <h1>台股財經新聞整理</h1>
+      </div>
+      <a class="admin-link" href="/public/admin.html">回饋管理</a>
+    </header>
+
+    <main>
+      <nav class="window-tabs" aria-label="新聞時段">
+        <button class="tab is-active" data-window="pre_market">盤前</button>
+        <button class="tab" data-window="market">盤中</button>
+        <button class="tab" data-window="after_market">盤後</button>
+      </nav>
+
+      <section class="status-line" id="statusLine">讀取中...</section>
+      <section id="dashboard" class="dashboard"></section>
+    </main>
+
+    <template id="newsTemplate">
+      <article class="news-item">
+        <div class="news-meta"></div>
+        <h3><a target="_blank" rel="noreferrer"></a></h3>
+        <p></p>
+        <div class="chips"></div>
+      </article>
+    </template>
+
+    <script src="/public/app.js" type="module"></script>
+  </body>
+</html>

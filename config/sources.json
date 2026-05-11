@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Digitimes",
+    "url": "https://www.digitimes.com.tw/",
+    "type": "technology_news",
+    "enabled": true,
+    "priority": 3
+  },
+  {
+    "name": "商周",
+    "url": "https://www.businessweekly.com.tw/",
+    "type": "business_news",
+    "enabled": true,
+    "priority": 1
+  },
+  {
+    "name": "經濟日報",
+    "url": "https://money.udn.com/money/index",
+    "type": "financial_news",
+    "enabled": true,
+    "priority": 3
+  },
+  {
+    "name": "經濟日報即時",
+    "url": "https://money.udn.com/money/cate/5590",
+    "type": "financial_news",
+    "enabled": true,
+    "priority": 3
+  },
+  {
+    "name": "永豐金證券",
+    "url": "https://www.sinotrade.com.tw/richclub",
+    "type": "broker_research",
+    "enabled": true,
+    "priority": 3
+  },
+  {
+    "name": "FTNN新聞網",
+    "url": "https://www.ftnn.com.tw/",
+    "type": "financial_news",
+    "enabled": true,
+    "priority": 2
+  },
+  {
+    "name": "TrendForce",
+    "url": "https://www.trendforce.com.tw/",
+    "type": "industry_research",
+    "enabled": true,
+    "priority": 3
+  },
+  {
+    "name": "科技新報",
+    "url": "https://technews.tw/",
+    "type": "technology_news",
+    "enabled": true,
+    "priority": 3
+  }
+]

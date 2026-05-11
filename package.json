@@ -1,0 +1,16 @@
+{
+  "name": "stock-tw-news-radar",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "fetch-news": "node scripts/fetch_news.js",
+    "classify-news": "node scripts/classify_news.js",
+    "build-daily": "node scripts/build_daily_data.js",
+    "update-daily": "node scripts/update_daily.js",
+    "serve": "node scripts/serve.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

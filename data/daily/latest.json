@@ -1,0 +1,725 @@
+{
+  "date": "2026-05-11",
+  "generated_at": "2026-05-11T10:09:55.635Z",
+  "time_windows": {
+    "pre_market": {
+      "major_positive": [],
+      "hot_stocks": [],
+      "hot_industries": [],
+      "broker_view": [],
+      "stock_news": []
+    },
+    "market": {
+      "major_positive": [],
+      "hot_stocks": [],
+      "hot_industries": [],
+      "broker_view": [],
+      "stock_news": []
+    },
+    "after_market": {
+      "major_positive": [
+        {
+          "id": "f65372b857afbb05",
+          "title": "群創 FOPLP 傳將與台積合作 董座喊先進封裝技術「已站在第一領先群」 2026-05-10 23:16",
+          "url": "https://money.udn.com/money/story/5612/9494078?from=edn_hottest_index",
+          "source": "經濟日報",
+          "source_type": "financial_news",
+          "source_priority": 3,
+          "published_at": "2026-05-11T10:07:43.294Z",
+          "time_window": "after_market",
+          "summary": "群創 FOPLP 傳將與台積合作 董座喊先進封裝技術「已站在第一領先群」 2026-05-10 23:16",
+          "content": "群創 FOPLP 傳將與台積合作 董座喊先進封裝技術「已站在第一領先群」 2026-05-10 23:16",
+          "matched_stocks": [
+            {
+              "code": "3481",
+              "name": "群創"
+            }
+          ],
+          "matched_industries": [
+            "先進封裝",
+            "封裝"
+          ],
+          "category": "major_positive",
+          "score": 105,
+          "excluded": false,
+          "exclude_reason": "",
+          "user_feedback": null,
+          "keyword_matches": {
+            "positive": [
+              "合作"
+            ],
+            "broker": [],
+            "neutral": [],
+            "exclude": []
+          },
+          "user_rating": null
+        },
+        {
+          "id": "f35f1d7da5c0390d",
+          "title": "群創扇出型面板封裝搶鏡 傳晶圓一哥有意合作",
+          "url": "https://money.udn.com/money/story/5612/9494068?from=edn_hottest_index",
+          "source": "經濟日報",
+          "source_type": "financial_news",
+          "source_priority": 3,
+          "published_at": "2026-05-11T10:07:43.294Z",
+          "time_window": "after_market",
+          "summary": "群創扇出型面板封裝搶鏡 傳晶圓一哥有意合作",
+          "content": "群創扇出型面板封裝搶鏡 傳晶圓一哥有意合作",
+          "matched_stocks": [
+            {
+              "code": "3481",
+              "name": "群創"
+            }
+          ],
+          "matched_industries": [
+            "面板",
+            "封裝"
+          ],
+          "category": "major_positive",
+          "score": 105,
+          "excluded": false,
+          "exclude_reason": "",
+          "user_feedback": null,
+          "keyword_matches": {
+            "positive": [
+              "合作"
+            ],
+            "broker": [],
+            "neutral": [],
+            "exclude": []
+          },
+          "user_rating": null
+        },
+        {
+          "id": "c3a69030c198eda2",
+          "title": "味之素確認 ABF 漲價開始，外資維持欣興、南電正面評價",
+          "url": "https://technews.tw/2026/05/11/ajinomoto-and-abf-unimicron-nan-ya/",
+          "source": "科技新報",
+          "source_type": "technology_news",
+          "source_priority": 3,
+          "published_at": "2026-05-11T10:07:45.926Z",
+          "time_window": "after_market",
+          "summary": "味之素確認 ABF 漲價開始，外資維持欣興、南電正面評價",
+          "content": "味之素確認 ABF 漲價開始，外資維持欣興、南電正面評價",
+          "matched_stocks": [
+            {
+              "code": "3037",
+              "name": "欣興"
+            },
+            {
+              "code": "8046",
+              "name": "南電"
+            }
+          ],
+          "matched_industries": [
+            "ABF",
+            "味之素"
+          ],
+          "category": "major_positive",
+          "score": 105,
+          "excluded": false,
+          "exclude_reason": "",
+          "user_feedback": null,
+          "keyword_matches": {
+            "positive": [
+              "漲價"
+            ],
+            "broker": [],
+            "neutral": [],
+            "exclude": []
+          },
+          "user_rating": null
+        },
+        {
+          "id": "88951d58c2e2ac13",
+          "title": "外資：味之素確認 ABF 漲價開始 欣興及南電正面評價不變 | 市場焦點 | 證券 | 經濟日報",
+          "url": "https://money.udn.com/money/story/5607/9494743?from=edn_newest_index",
+          "source": "經濟日報",
+          "source_type": "financial_news",
+          "source_priority": 3,
+          "published_at": "2026-05-11T10:07:46.300Z",
+          "time_window": "after_market",
+          "summary": "美系大行表示，味之素已確認ABF漲價開始，採取逐客戶調整方式，會考量各客戶情況調漲價格。券商重申對欣興（3037）、南電（8046）正面評價不變。",
+          "content": "外資：味之素確認 ABF 漲價開始 欣興及南電正面評價不變 | 市場焦點 | 證券 | 經濟日報 美系大行表示，味之素已確認ABF漲價開始，採取逐客戶調整方式，會考量各客戶情況調漲價格。券商重申對欣興（3037）、南電（8046）正面評價不變。",
+          "matched_stocks": [
+            {
+              "code": "3037",
+              "name": "欣興"
+            },
+            {
+              "code": "8046",
+              "name": "南電"
+            }
+          ],
+          "matched_industries": [
+            "ABF",
+            "味之素"
+          ],
+          "category": "major_positive",
+          "score": 105,
+          "excluded": false,
+          "exclude_reason": "",
+          "user_feedback": null,
+          "keyword_matches": {
+            "positive": [
+              "漲價"
+            ],
+            "broker": [
+              "券商"
+            ],
+            "neutral": [],
+            "exclude": []
+          },
+          "user_rating": null
+        },
+        {
+          "id": "206237f22f0c931c",
+          "title": "華邦電（2344）做什麼、法說會重點有哪些？Q1 EPS衝2.25元改寫近五年新高，CMS缺口延伸至2028年、全年擴產405億力拼下一輪成長｜股市話題 更新於 2026.05.05 7,710",
+          "url": "https://www.sinotrade.com.tw/richclub/hotstock/-69f9b4e674fe280086c42437",
+          "source": "永豐金證券",
+          "source_type": "broker_research",
+          "source_priority": 3,
+          "published_at": "2026-05-11T10:07:44.746Z",
+          "time_window": "after_market",
+          "summary": "華邦電（2344）做什麼、法說會重點有哪些？Q1 EPS衝2.25元改寫近五年新高，CMS缺口延伸至2028年、全年擴產405億力拼下一輪成長｜股市話題 更新於 2026.05.05 7,710",
+          "content": "華邦電（2344）做什麼、法說會重點有哪些？Q1 EPS衝2.25元改寫近五年新高，CMS缺口延伸至2028年、全年擴產405億力拼下一輪成長｜股市話題 更新於 2026.05.05 7,710",
+          "matched_stocks": [
+            {
+              "code": "2344",
+              "name": "華邦電"
+            }
+          ],
+          "matched_industries": [],
+          "category": "major_positive",
+          "score": 80,
+          "excluded": false,
+          "exclude_reason": "",
+          "user_feedback": null,
+          "keyword_matches": {
+            "positive": [
+              "擴產"
+            ],
+            "broker": [],
+            "neutral": [],
+            "exclude": []
+          },
+          "user_rating": null
+        },
+        {
+          "id": "93120ec98a8e360e",
+          "title": "AI 重塑 Nokia：台廠 CPO 鎖定高階大單",
+          "url": "https://technews.tw/2026/05/08/ai-reshapes-nokia-taiwan-cpo-targets-high-end-orders/",
+          "source": "科技新報",
+          "source_type": "technology_news",
+          "source_priority": 3,
+          "published_at": "2026-05-11T10:07:45.926Z",
+          "time_window": "after_market",
+          "summary": "AI 重塑 Nokia：台廠 CPO 鎖定高階大單",
+          "content": "AI 重塑 Nokia：台廠 CPO 鎖定高階大單",
+          "matched_stocks": [],
+          "matched_industries": [
+            "CPO"
+          ],
+          "category": "major_positive",
+          "score": 65,
+          "excluded": false,
+          "exclude_reason": "",
+          "user_feedback": null,
+          "keyword_matches": {
+            "positive": [
+              "大單"
+            ],
+            "broker": [],
+            "neutral": [],
+            "exclude": []
+          },
+          "user_rating": null
+        }
+      ],
+      "hot_stocks": [
+        {
+          "code": "8046",
+          "name": "南電",
+          "count": 3,
+          "score": 300,
+          "news_ids": [
+            "c3a69030c198eda2",
+            "88951d58c2e2ac13",
+            "b566511bc542dfa0"
+          ]
+        },
+        {
+          "code": "3481",
+          "name": "群創",
+          "count": 3,
+          "score": 280,
+          "news_ids": [
+            "f65372b857afbb05",
+            "f35f1d7da5c0390d",
+            "8c131877a6e595d8"
+          ]
+        },
+        {
+          "code": "3037",
+          "name": "欣興",
+          "count": 2,
+          "score": 210,
+          "news_ids": [
+            "c3a69030c198eda2",
+            "88951d58c2e2ac13"
+          ]
+        },
+        {
+          "code": "2330",
+          "name": "台積電",
+          "count": 3,
+          "score": 210,
+          "news_ids": [
+            "8c131877a6e595d8",
+            "1d0798e2a667a23b",
+            "69594b2fd8364320"
+          ]
+        },
+        {
+          "code": "2408",
+          "name": "南亞科",
+          "count": 3,
+          "score": 205,
+          "news_ids": [
+            "c240c7e531219c18",
+            "5184da0196e0bf2e",
+            "b03765156cfd9da6"
+          ]
+        },
+        {
+          "code": "2454",
+          "name": "聯發科",
+          "count": 2,
+          "score": 130,
+          "news_ids": [
+            "c240c7e531219c18",
+            "f9047693ef4671ea"
+          ]
+        },
+        {
+          "code": "2344",
+          "name": "華邦電",
+          "count": 1,
+          "score": 80,
+          "news_ids": [
+            "206237f22f0c931c"
+          ]
+        },
+        {
+          "code": "8299",
+          "name": "群聯",
+          "count": 1,
+          "score": 65,
+          "news_ids": [
+            "b03765156cfd9da6"
+          ]
+        },
+        {
+          "code": "2451",
+          "name": "創見",
+          "count": 1,
+          "score": 65,
+          "news_ids": [
+            "b03765156cfd9da6"
+          ]
+        }
+      ],
+      "hot_industries": [
+        {
+          "name": "封裝",
+          "count": 4,
+          "score": 350,
+          "news_ids": [
+            "f65372b857afbb05",
+            "f35f1d7da5c0390d",
+            "8c131877a6e595d8",
+            "69594b2fd8364320"
+          ]
+        },
+        {
+          "name": "ABF",
+          "count": 3,
+          "score": 300,
+          "news_ids": [
+            "c3a69030c198eda2",
+            "88951d58c2e2ac13",
+            "b566511bc542dfa0"
+          ]
+        },
+        {
+          "name": "味之素",
+          "count": 2,
+          "score": 210,
+          "news_ids": [
+            "c3a69030c198eda2",
+            "88951d58c2e2ac13"
+          ]
+        },
+        {
+          "name": "記憶體",
+          "count": 3,
+          "score": 205,
+          "news_ids": [
+            "c240c7e531219c18",
+            "5184da0196e0bf2e",
+            "b03765156cfd9da6"
+          ]
+        },
+        {
+          "name": "先進封裝",
+          "count": 2,
+          "score": 175,
+          "news_ids": [
+            "f65372b857afbb05",
+            "69594b2fd8364320"
+          ]
+        },
+        {
+          "name": "面板",
+          "count": 1,
+          "score": 105,
+          "news_ids": [
+            "f35f1d7da5c0390d"
+          ]
+        },
+        {
+          "name": "載板",
+          "count": 1,
+          "score": 90,
+          "news_ids": [
+            "b566511bc542dfa0"
+          ]
+        },
+        {
+          "name": "矽光子",
+          "count": 1,
+          "score": 70,
+          "news_ids": [
+            "1d0798e2a667a23b"
+          ]
+        },
+        {
+          "name": "CoWoS",
+          "count": 1,
+          "score": 70,
+          "news_ids": [
+            "69594b2fd8364320"
+          ]
+        },
+        {
+          "name": "CPO",
+          "count": 1,
+          "score": 65,
+          "news_ids": [
+            "93120ec98a8e360e"
+          ]
+        },
+        {
+          "name": "ASIC",
+          "count": 1,
+          "score": 60,
+          "news_ids": [
+            "f9047693ef4671ea"
+          ]
+        }
+      ],
+      "broker_view": [
+        {
+          "id": "b566511bc542dfa0",
+          "title": "ABF 載板進入定價上升週期！外資喊買南電調升目標價至 1,115 元",
+          "url": "https://technews.tw/2026/05/08/high-end-network-switches/",
+          "source": "科技新報",
+          "source_type": "technology_news",
+          "source_priority": 3,
+          "published_at": "2026-05-11T10:07:45.926Z",
+          "time_window": "after_market",
+          "summary": "ABF 載板進入定價上升週期！外資喊買南電調升目標價至 1,115 元",
+          "content": "ABF 載板進入定價上升週期！外資喊買南電調升目標價至 1,115 元",
+          "matched_stocks": [
+            {
+              "code": "8046",
+              "name": "南電"
+            }
+          ],
+          "matched_industries": [
+            "ABF",
+            "載板"
+          ],
+          "category": "broker_view",
+          "score": 90,
+          "excluded": false,
+          "exclude_reason": "",
+          "user_feedback": null,
+          "keyword_matches": {
+            "positive": [],
+            "broker": [
+              "目標價",
+              "調升"
+            ],
+            "neutral": [],
+            "exclude": []
+          },
+          "user_rating": null
+        }
+      ],
+      "stock_news": [
+        {
+          "id": "c240c7e531219c18",
+          "title": "台股收漲186點 聯發科七強領多頭、南亞科帶記憶體股匯人氣 2026-05-11 13:44",
+          "url": "https://money.udn.com/money/story/5607/9495081?from=edn_subcatelist_cate",
+          "source": "經濟日報即時",
+          "source_type": "financial_news",
+          "source_priority": 3,
+          "published_at": "2026-05-11T10:07:43.851Z",
+          "time_window": "after_market",
+          "summary": "台股收漲186點 聯發科七強領多頭、南亞科帶記憶體股匯人氣 2026-05-11 13:44",
+          "content": "台股收漲186點 聯發科七強領多頭、南亞科帶記憶體股匯人氣 2026-05-11 13:44",
+          "matched_stocks": [
+            {
+              "code": "2454",
+              "name": "聯發科"
+            },
+            {
+              "code": "2408",
+              "name": "南亞科"
+            }
+          ],
+          "matched_industries": [
+            "記憶體"
+          ],
+          "category": "stock_news",
+          "score": 70,
+          "excluded": false,
+          "exclude_reason": "",
+          "user_feedback": null,
+          "keyword_matches": {
+            "positive": [],
+            "broker": [],
+            "neutral": [],
+            "exclude": []
+          },
+          "user_rating": null
+        },
+        {
+          "id": "5184da0196e0bf2e",
+          "title": "南亞科重返300元領軍！記憶體多頭噴發 缺貨＋MSCI＋三星罷工點火",
+          "url": "https://money.udn.com/money/story/5607/9494692?from=edn_hottestlist_cate_side",
+          "source": "經濟日報即時",
+          "source_type": "financial_news",
+          "source_priority": 3,
+          "published_at": "2026-05-11T10:07:43.851Z",
+          "time_window": "after_market",
+          "summary": "南亞科重返300元領軍！記憶體多頭噴發 缺貨＋MSCI＋三星罷工點火",
+          "content": "南亞科重返300元領軍！記憶體多頭噴發 缺貨＋MSCI＋三星罷工點火",
+          "matched_stocks": [
+            {
+              "code": "2408",
+              "name": "南亞科"
+            }
+          ],
+          "matched_industries": [
+            "記憶體"
+          ],
+          "category": "stock_news",
+          "score": 70,
+          "excluded": false,
+          "exclude_reason": "",
+          "user_feedback": null,
+          "keyword_matches": {
+            "positive": [],
+            "broker": [],
+            "neutral": [],
+            "exclude": []
+          },
+          "user_rating": null
+        },
+        {
+          "id": "8c131877a6e595d8",
+          "title": "群創 FOPLP 封裝大爆發？傳攜手台積電搶 AI 肥單 29萬張買單高掛漲停",
+          "url": "https://money.udn.com/money/story/5607/9494492?from=edn_hottestlist_cate_side",
+          "source": "經濟日報即時",
+          "source_type": "financial_news",
+          "source_priority": 3,
+          "published_at": "2026-05-11T10:07:43.851Z",
+          "time_window": "after_market",
+          "summary": "群創 FOPLP 封裝大爆發？傳攜手台積電搶 AI 肥單 29萬張買單高掛漲停",
+          "content": "群創 FOPLP 封裝大爆發？傳攜手台積電搶 AI 肥單 29萬張買單高掛漲停",
+          "matched_stocks": [
+            {
+              "code": "2330",
+              "name": "台積電"
+            },
+            {
+              "code": "3481",
+              "name": "群創"
+            }
+          ],
+          "matched_industries": [
+            "封裝"
+          ],
+          "category": "stock_news",
+          "score": 70,
+          "excluded": false,
+          "exclude_reason": "",
+          "user_feedback": null,
+          "keyword_matches": {
+            "positive": [],
+            "broker": [],
+            "neutral": [],
+            "exclude": []
+          },
+          "user_rating": null
+        },
+        {
+          "id": "1d0798e2a667a23b",
+          "title": "矽光子：Nvidia、台積電、Broadcom 的下一張王牌",
+          "url": "https://technews.tw/silicon-photonics-becomes-the-next-billion-dollar-bet-2025/",
+          "source": "科技新報",
+          "source_type": "technology_news",
+          "source_priority": 3,
+          "published_at": "2026-05-11T10:07:45.926Z",
+          "time_window": "after_market",
+          "summary": "矽光子：Nvidia、台積電、Broadcom 的下一張王牌",
+          "content": "矽光子：Nvidia、台積電、Broadcom 的下一張王牌",
+          "matched_stocks": [
+            {
+              "code": "2330",
+              "name": "台積電"
+            }
+          ],
+          "matched_industries": [
+            "矽光子"
+          ],
+          "category": "stock_news",
+          "score": 70,
+          "excluded": false,
+          "exclude_reason": "",
+          "user_feedback": null,
+          "keyword_matches": {
+            "positive": [],
+            "broker": [],
+            "neutral": [],
+            "exclude": []
+          },
+          "user_rating": null
+        },
+        {
+          "id": "69594b2fd8364320",
+          "title": "台積電 CoWoS 產能告急背後！軍備競賽最大贏家「先進封裝設備概念股」一次看",
+          "url": "https://finance.technews.tw/2025/09/08/advanced-packaging-equipment-factory/",
+          "source": "科技新報",
+          "source_type": "technology_news",
+          "source_priority": 3,
+          "published_at": "2026-05-11T10:07:45.926Z",
+          "time_window": "after_market",
+          "summary": "台積電 CoWoS 產能告急背後！軍備競賽最大贏家「先進封裝設備概念股」一次看",
+          "content": "台積電 CoWoS 產能告急背後！軍備競賽最大贏家「先進封裝設備概念股」一次看",
+          "matched_stocks": [
+            {
+              "code": "2330",
+              "name": "台積電"
+            }
+          ],
+          "matched_industries": [
+            "先進封裝",
+            "CoWoS",
+            "封裝"
+          ],
+          "category": "stock_news",
+          "score": 70,
+          "excluded": false,
+          "exclude_reason": "",
+          "user_feedback": null,
+          "keyword_matches": {
+            "positive": [],
+            "broker": [],
+            "neutral": [],
+            "exclude": []
+          },
+          "user_rating": null
+        },
+        {
+          "id": "b03765156cfd9da6",
+          "title": "記憶體漲不停！「這檔」連6漲41.4%創高牽南亞科等7檔漲停 群聯、創見等4檔寫新天價",
+          "url": "https://www.ftnn.com.tw/news/544880",
+          "source": "FTNN新聞網",
+          "source_type": "financial_news",
+          "source_priority": 2,
+          "published_at": "2026-05-11T10:07:45.213Z",
+          "time_window": "after_market",
+          "summary": "記憶體漲不停！「這檔」連6漲41.4%創高牽南亞科等7檔漲停 群聯、創見等4檔寫新天價",
+          "content": "記憶體漲不停！「這檔」連6漲41.4%創高牽南亞科等7檔漲停 群聯、創見等4檔寫新天價",
+          "matched_stocks": [
+            {
+              "code": "2408",
+              "name": "南亞科"
+            },
+            {
+              "code": "8299",
+              "name": "群聯"
+            },
+            {
+              "code": "2451",
+              "name": "創見"
+            }
+          ],
+          "matched_industries": [
+            "記憶體"
+          ],
+          "category": "stock_news",
+          "score": 65,
+          "excluded": false,
+          "exclude_reason": "",
+          "user_feedback": null,
+          "keyword_matches": {
+            "positive": [],
+            "broker": [],
+            "neutral": [],
+            "exclude": []
+          },
+          "user_rating": null
+        },
+        {
+          "id": "f9047693ef4671ea",
+          "title": "聯發科AI訂單起飛！ASIC營收喊上看20億美元，這業務卻成最大變數？",
+          "url": "https://www.businessweekly.com.tw/business/blog/3021322",
+          "source": "商周",
+          "source_type": "business_news",
+          "source_priority": 1,
+          "published_at": "2026-05-11T10:07:42.661Z",
+          "time_window": "after_market",
+          "summary": "聯發科AI訂單起飛！ASIC營收喊上看20億美元，這業務卻成最大變數？",
+          "content": "聯發科AI訂單起飛！ASIC營收喊上看20億美元，這業務卻成最大變數？",
+          "matched_stocks": [
+            {
+              "code": "2454",
+              "name": "聯發科"
+            }
+          ],
+          "matched_industries": [
+            "ASIC"
+          ],
+          "category": "stock_news",
+          "score": 60,
+          "excluded": false,
+          "exclude_reason": "",
+          "user_feedback": null,
+          "keyword_matches": {
+            "positive": [],
+            "broker": [],
+            "neutral": [],
+            "exclude": []
+          },
+          "user_rating": null
+        }
+      ]
+    }
+  },
+  "all_news_count": 463,
+  "visible_news_count": 14
+}
