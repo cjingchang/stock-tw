@@ -1,3 +1,3 @@
 # stock-tw
-https://github.com/cjingchang/stock-tw
+https://cjingchang.github.io/stock-tw/
 
