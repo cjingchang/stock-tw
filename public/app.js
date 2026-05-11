@@ -28,7 +28,7 @@ load();
 async function load() {
   const status = document.querySelector("#statusLine");
   try {
-    const response = await fetch("/data/daily/latest.json", { cache: "no-store" });
+    const response = await fetch("../data/daily/latest.json", { cache: "no-store" });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     dailyData = await response.json();
     status.textContent = `${dailyData.date} 更新，共 ${dailyData.visible_news_count || 0} 則上首頁`;

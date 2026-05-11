@@ -10,7 +10,7 @@ loadAdmin();
 async function loadAdmin() {
   const status = document.querySelector("#adminStatus");
   try {
-    const response = await fetch("/data/daily/latest.json", { cache: "no-store" });
+    const response = await fetch("../data/daily/latest.json", { cache: "no-store" });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     const dailyData = await response.json();
     const news = flattenNews(dailyData);
