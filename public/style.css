@@ -152,38 +152,43 @@ main {
   margin-bottom: 6px;
 }
 
-.star-rating {
+.vote-buttons {
   align-items: center;
   display: inline-flex;
-  gap: 2px;
+  gap: 6px;
 }
 
-.star-rating button {
-  background: transparent;
-  border: 0;
-  color: #b06a18;
+.vote-buttons button {
+  align-items: center;
+  background: #eef3ef;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--ink);
   cursor: pointer;
-  font-size: 20px;
+  display: inline-flex;
+  font-size: 15px;
   font-weight: 900;
-  line-height: 1;
-  min-height: 28px;
-  min-width: 24px;
-  padding: 0;
+  justify-content: center;
+  line-height: 1.1;
+  min-height: 30px;
+  min-width: 34px;
+  padding: 4px 8px;
 }
 
-.star-rating button:hover,
-.star-rating button.is-selected {
-  color: #d18414;
+.vote-buttons button:hover,
+.vote-buttons button.is-selected {
+  background: #d9eee7;
+  border-color: #98c8ba;
 }
 
-.star-rating[data-saved="true"]::after {
+.vote-buttons[data-saved="true"]::after {
   color: var(--accent);
   content: "已記錄";
   font-size: 12px;
   margin-left: 6px;
 }
 
-.star-rating[data-saved="false"]::after {
+.vote-buttons[data-saved="false"]::after {
   color: var(--accent-2);
   content: "寫入失敗";
   font-size: 12px;
@@ -212,7 +217,7 @@ main {
 }
 
 .chips span,
-.rank-row span {
+.rank-toggle span {
   background: var(--chip);
   border-radius: 999px;
   color: #31534d;
@@ -228,14 +233,68 @@ main {
 }
 
 .rank-row {
-  align-items: center;
   border: 1px solid var(--line);
   border-radius: 8px;
+  min-height: 48px;
+  overflow: hidden;
+}
+
+.rank-row.is-open {
+  grid-column: 1 / -1;
+}
+
+.rank-toggle {
+  align-items: center;
+  background: transparent;
+  border: 0;
+  color: var(--ink);
+  cursor: pointer;
   display: flex;
+  font: inherit;
   gap: 8px;
   justify-content: space-between;
   min-height: 48px;
   padding: 10px;
+  text-align: left;
+  width: 100%;
+}
+
+.rank-toggle:hover {
+  background: #f7faf7;
+}
+
+.rank-details {
+  border-top: 1px solid var(--line);
+  padding: 10px;
+}
+
+.rank-count {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.rank-news-links {
+  display: grid;
+  gap: 10px;
+}
+
+.rank-news-link {
+  display: grid;
+  gap: 3px;
+}
+
+.rank-news-link a {
+  color: var(--ink);
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+.rank-news-link span {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
 }
 
 .feedback-item {

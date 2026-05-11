@@ -18,14 +18,18 @@
     "url": "https://money.udn.com/money/index",
     "type": "financial_news",
     "enabled": true,
-    "priority": 3
+    "priority": 3,
+    "fetch_detail": true,
+    "detail_limit": 50
   },
   {
     "name": "經濟日報即時",
     "url": "https://money.udn.com/money/cate/5590",
     "type": "financial_news",
     "enabled": true,
-    "priority": 3
+    "priority": 3,
+    "fetch_detail": true,
+    "detail_limit": 50
   },
   {
     "name": "永豐金證券",
@@ -54,5 +58,15 @@
     "type": "technology_news",
     "enabled": true,
     "priority": 3
+  },
+  {
+    "name": "CMoney",
+    "url": "https://www.cmoney.tw/finance/f00009.aspx",
+    "type": "financial_news",
+    "enabled": true,
+    "priority": 2,
+    "max_items": 80,
+    "fetch_detail": true,
+    "detail_limit": 30
   }
 ]

@@ -1,9 +1,11 @@
 import { createServer } from "node:http";
+import { spawn } from "node:child_process";
 import { existsSync, readFileSync, appendFileSync, mkdirSync } from "node:fs";
 import { dirname, extname, join, normalize } from "node:path";
 import { csvEscape, pathFromRoot } from "./lib.js";
 
 const port = Number(process.env.PORT || 5173);
+let updatePromise = null;
 const mimeTypes = {
   ".html": "text/html; charset=utf-8",
   ".css": "text/css; charset=utf-8",
@@ -14,6 +16,10 @@ const mimeTypes = {
 
 createServer(async (request, response) => {
   try {
+    if (request.method === "POST" && request.url === "/api/update-daily") {
+      await handleUpdateDaily(response);
+      return;
+    }
     if (request.method === "POST" && request.url === "/api/feedback") {
       await handleFeedback(request, response);
       return;
@@ -26,6 +32,37 @@ createServer(async (request, response) => {
 }).listen(port, () => {
   console.log(`Finance news radar: http://localhost:${port}/public/index.html`);
 });
+
+async function handleUpdateDaily(response) {
+  if (!updatePromise) {
+    updatePromise = runUpdateDaily().finally(() => {
+      updatePromise = null;
+    });
+  }
+
+  const startedAt = new Date().toISOString();
+  await updatePromise;
+  response.writeHead(200, { "content-type": "application/json" });
+  response.end(JSON.stringify({ ok: true, started_at: startedAt, finished_at: new Date().toISOString() }));
+}
+
+function runUpdateDaily() {
+  return new Promise((resolve, reject) => {
+    const child = spawn(process.execPath, ["scripts/update_daily.js"], {
+      cwd: pathFromRoot(),
+      stdio: "inherit"
+    });
+
+    child.on("error", reject);
+    child.on("close", (code) => {
+      if (code === 0) {
+        resolve();
+      } else {
+        reject(new Error(`update-daily failed with exit code ${code}`));
+      }
+    });
+  });
+}
 
 async function handleFeedback(request, response) {
   const body = await readBody(request);

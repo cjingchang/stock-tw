@@ -61,6 +61,8 @@ function feedbackAdjustment(relevantRows) {
     if (row.feedback === "irrelevant") adjustment -= 25;
     if (row.feedback === "block_similar") adjustment -= 45;
     if (row.feedback === "low_rating") adjustment -= 70;
+    if (row.feedback === "thumbs_up") adjustment += 8;
+    if (row.feedback === "thumbs_down") adjustment -= 70;
   }
   return adjustment;
 }

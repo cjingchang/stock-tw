@@ -1,6 +1,6 @@
 {
   "date": "2026-05-11",
-  "generated_at": "2026-05-11T10:09:55.635Z",
+  "generated_at": "2026-05-11T10:44:12.712Z",
   "time_windows": {
     "pre_market": {
       "major_positive": [],
@@ -283,12 +283,11 @@
         {
           "code": "2408",
           "name": "南亞科",
-          "count": 3,
-          "score": 205,
+          "count": 2,
+          "score": 140,
           "news_ids": [
             "c240c7e531219c18",
-            "5184da0196e0bf2e",
-            "b03765156cfd9da6"
+            "5184da0196e0bf2e"
           ]
         },
         {
@@ -308,24 +307,6 @@
           "score": 80,
           "news_ids": [
             "206237f22f0c931c"
-          ]
-        },
-        {
-          "code": "8299",
-          "name": "群聯",
-          "count": 1,
-          "score": 65,
-          "news_ids": [
-            "b03765156cfd9da6"
-          ]
-        },
-        {
-          "code": "2451",
-          "name": "創見",
-          "count": 1,
-          "score": 65,
-          "news_ids": [
-            "b03765156cfd9da6"
           ]
         }
       ],
@@ -361,22 +342,21 @@
           ]
         },
         {
-          "name": "記憶體",
-          "count": 3,
-          "score": 205,
-          "news_ids": [
-            "c240c7e531219c18",
-            "5184da0196e0bf2e",
-            "b03765156cfd9da6"
-          ]
-        },
-        {
           "name": "先進封裝",
           "count": 2,
           "score": 175,
           "news_ids": [
             "f65372b857afbb05",
             "69594b2fd8364320"
+          ]
+        },
+        {
+          "name": "記憶體",
+          "count": 2,
+          "score": 140,
+          "news_ids": [
+            "c240c7e531219c18",
+            "5184da0196e0bf2e"
           ]
         },
         {
@@ -644,47 +624,6 @@
           "user_rating": null
         },
         {
-          "id": "b03765156cfd9da6",
-          "title": "記憶體漲不停！「這檔」連6漲41.4%創高牽南亞科等7檔漲停 群聯、創見等4檔寫新天價",
-          "url": "https://www.ftnn.com.tw/news/544880",
-          "source": "FTNN新聞網",
-          "source_type": "financial_news",
-          "source_priority": 2,
-          "published_at": "2026-05-11T10:07:45.213Z",
-          "time_window": "after_market",
-          "summary": "記憶體漲不停！「這檔」連6漲41.4%創高牽南亞科等7檔漲停 群聯、創見等4檔寫新天價",
-          "content": "記憶體漲不停！「這檔」連6漲41.4%創高牽南亞科等7檔漲停 群聯、創見等4檔寫新天價",
-          "matched_stocks": [
-            {
-              "code": "2408",
-              "name": "南亞科"
-            },
-            {
-              "code": "8299",
-              "name": "群聯"
-            },
-            {
-              "code": "2451",
-              "name": "創見"
-            }
-          ],
-          "matched_industries": [
-            "記憶體"
-          ],
-          "category": "stock_news",
-          "score": 65,
-          "excluded": false,
-          "exclude_reason": "",
-          "user_feedback": null,
-          "keyword_matches": {
-            "positive": [],
-            "broker": [],
-            "neutral": [],
-            "exclude": []
-          },
-          "user_rating": null
-        },
-        {
           "id": "f9047693ef4671ea",
           "title": "聯發科AI訂單起飛！ASIC營收喊上看20億美元，這業務卻成最大變數？",
           "url": "https://www.businessweekly.com.tw/business/blog/3021322",
@@ -721,5 +660,5 @@
     }
   },
   "all_news_count": 463,
-  "visible_news_count": 14
+  "visible_news_count": 13
 }
