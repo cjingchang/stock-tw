@@ -14,6 +14,8 @@ const sections = [
 
 let dailyData = null;
 let currentWindow = "pre_market";
+const statusLine = document.querySelector("#statusLine");
+const updateButton = document.querySelector("#updateButton");
 
 document.querySelectorAll(".tab").forEach((button) => {
   button.addEventListener("click", () => {
@@ -23,28 +25,39 @@ document.querySelectorAll(".tab").forEach((button) => {
   });
 });
 
+updateButton?.addEventListener("click", () => refreshNews({ manual: true }));
+
 load();
 
 async function load() {
-  const status = document.querySelector("#statusLine");
-  let usedFallback = false;
   try {
-    status.textContent = "正在更新新聞...";
-    try {
-      await updateDailyNews();
-    } catch {
-      usedFallback = true;
-      status.textContent = "自動更新失敗，改用上次資料...";
-    }
-    const response = await fetch("../data/daily/latest.json", { cache: "no-store" });
-    if (!response.ok) throw new Error(`HTTP ${response.status}`);
-    dailyData = await response.json();
-    status.textContent = `${formatDateTime(dailyData.generated_at || dailyData.date)} ${usedFallback ? "上次更新" : "更新"}，共 ${dailyData.visible_news_count || 0} 則上首頁`;
+    statusLine.textContent = "正在讀取上次資料...";
+    await loadDailyData("上次更新");
     render();
   } catch (error) {
-    status.textContent = "尚未建立每日資料，請先執行 npm run update-daily。";
+    statusLine.textContent = "尚未建立每日資料，請按自動更新。";
     document.querySelector("#dashboard").innerHTML = "";
   }
+}
+
+async function refreshNews({ manual = false } = {}) {
+  try {
+    setUpdating(true, manual ? "正在自動更新新聞..." : "正在更新新聞...");
+    await updateDailyNews();
+    await loadDailyData("更新");
+    render();
+  } catch (error) {
+    statusLine.textContent = `更新失敗：${formatUpdateError(error)}`;
+  } finally {
+    setUpdating(false);
+  }
+}
+
+async function loadDailyData(label) {
+  const response = await fetch(`../data/daily/latest.json?t=${Date.now()}`, { cache: "no-store" });
+  if (!response.ok) throw new Error(`HTTP ${response.status}`);
+  dailyData = await response.json();
+  statusLine.textContent = `${formatDateTime(dailyData.generated_at || dailyData.date)} ${label}，共 ${dailyData.visible_news_count || 0} 則上首頁`;
 }
 
 async function updateDailyNews() {
@@ -52,7 +65,34 @@ async function updateDailyNews() {
     method: "POST",
     cache: "no-store"
   });
-  if (!response.ok) throw new Error(`HTTP ${response.status}`);
+  if (!response.ok) {
+    let message = `HTTP ${response.status}`;
+    try {
+      const body = await response.json();
+      message = body.error || message;
+    } catch {
+      // Keep HTTP status message.
+    }
+    throw new Error(message);
+  }
+}
+
+function setUpdating(isUpdating, message = "") {
+  if (updateButton) {
+    updateButton.disabled = isUpdating;
+    updateButton.textContent = isUpdating ? "更新中..." : "自動更新";
+  }
+  if (message) statusLine.textContent = message;
+}
+
+function formatUpdateError(error) {
+  if (location.hostname.endsWith("github.io")) {
+    return "線上版只能顯示已上傳資料；請用本機的「台股新聞.app」更新後再同步到 GitHub。";
+  }
+  if (location.protocol === "file:") {
+    return "請用「台股新聞.app」開啟網頁，直接打開 HTML 無法更新資料。";
+  }
+  return error.message || "請確認台股新聞服務已啟動。";
 }
 
 function render() {
@@ -134,7 +174,7 @@ function renderRankDetails(rankItem, newsById) {
   const relatedNews = (rankItem.news_ids || [])
     .map((id) => newsById.get(id))
     .filter(Boolean)
-    .sort((a, b) => b.score - a.score);
+    .sort(sortByPublishedDesc);
 
   const count = document.createElement("div");
   count.className = "rank-count";
@@ -194,6 +234,15 @@ function renderNews(item) {
   return node;
 }
 
+function sortByPublishedDesc(a, b) {
+  return publishedTime(b) - publishedTime(a) || b.score - a.score;
+}
+
+function publishedTime(item) {
+  const time = new Date(item.published_at).getTime();
+  return Number.isNaN(time) ? 0 : time;
+}
+
 function renderVoteButtons(item) {
   const group = document.createElement("span");
   group.className = "vote-buttons";
@@ -239,6 +288,11 @@ async function submitVote(group, item, feedback) {
     });
     if (!response.ok) throw new Error("failed");
     group.dataset.saved = "true";
+    if (feedback === "thumbs_down") {
+      removeNewsFromDailyData(item.id);
+      render();
+      statusLine.textContent = `${formatDateTime(dailyData.generated_at || dailyData.date)} 已移除不推薦新聞，共 ${dailyData.visible_news_count || 0} 則上首頁`;
+    }
   } catch {
     group.dataset.saved = "false";
   } finally {
@@ -246,6 +300,59 @@ async function submitVote(group, item, feedback) {
       button.disabled = false;
     });
   }
+}
+
+function removeNewsFromDailyData(newsId) {
+  if (!dailyData) return;
+  for (const windowData of Object.values(dailyData.time_windows || {})) {
+    for (const key of ["major_positive", "broker_view", "stock_news"]) {
+      windowData[key] = (windowData[key] || []).filter((news) => news.id !== newsId);
+    }
+    recalculateRanks(windowData);
+  }
+  dailyData.visible_news_count = countVisibleNews(dailyData);
+}
+
+function recalculateRanks(windowData) {
+  const news = [
+    ...(windowData.major_positive || []),
+    ...(windowData.broker_view || []),
+    ...(windowData.stock_news || [])
+  ];
+  windowData.hot_stocks = rankBy(news, "stock");
+  windowData.hot_industries = rankBy(news, "industry");
+}
+
+function rankBy(news, type) {
+  const ranks = new Map();
+  for (const item of news) {
+    const entries = type === "stock" ? item.matched_stocks || [] : item.matched_industries || [];
+    for (const entry of entries) {
+      const key = type === "stock" ? entry.code || entry.name : entry;
+      if (!key) continue;
+      const current = ranks.get(key) || (type === "stock"
+        ? { ...entry, count: 0, score: 0, news_ids: [] }
+        : { name: entry, count: 0, score: 0, news_ids: [] });
+      current.count += 1;
+      current.score += item.score;
+      current.news_ids.push(item.id);
+      ranks.set(key, current);
+    }
+  }
+  return [...ranks.values()]
+    .filter((item) => type !== "stock" || item.score > 70)
+    .sort((a, b) => b.score - a.score)
+    .slice(0, type === "stock" ? 20 : 12);
+}
+
+function countVisibleNews(data) {
+  const ids = new Set();
+  for (const windowData of Object.values(data.time_windows || {})) {
+    for (const key of ["major_positive", "broker_view", "stock_news"]) {
+      for (const item of windowData[key] || []) ids.add(item.id);
+    }
+  }
+  return ids.size;
 }
 
 function categoryLabel(category) {
